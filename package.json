@@ -1,0 +1,24 @@
+{
+  "name": "btc_riches",
+  "version": "0.0.1",
+  "description": "Tries to crack a BTC address and look pretty doing it",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [
+    "bitcoin"
+  ],
+  "author": "@mdp <m@mdp.im>",
+  "license": "MIT",
+  "dependencies": {
+    "d3": "~3.4.5",
+    "bitcoinjs-lib": "~0.1.3",
+    "gulp-concat": "~2.2.0",
+    "gulp-minify-css": "~0.3.0",
+    "gulp-watch": "~0.5.3",
+    "appliance_shim": "~0.0.1",
+    "express": "~3.5.0",
+    "jquery": "~2.1.0"
+  }
+}
