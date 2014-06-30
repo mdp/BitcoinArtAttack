@@ -8,7 +8,7 @@ var express = require('express');
 
 var server = express();
 var serverport = process.env['PORT'] || 3000;
-server.use(express.static('./build'));
+server.use(express.static('./gh-pages'));
 
 
 gulp.task('serve', function() {
@@ -24,14 +24,14 @@ var paths = {
 
 gulp.task('statics', function() {
   return gulp.src(paths.statics)
-    .pipe(gulp.dest('../gh-pages'));
+    .pipe(gulp.dest('./gh-pages'));
 });
 
 
 gulp.task('js', function() {
   return gulp.src(paths.js)
     .pipe(browserify({}))
-    .pipe(gulp.dest('./build'));
+    .pipe(gulp.dest('./gh-pages'));
 });
 
 gulp.task('styles', function() {
@@ -39,7 +39,7 @@ gulp.task('styles', function() {
   .pipe(minifyCSS({
     "root": "./src/css"
   }))
-  .pipe(gulp.dest('build/css'));
+  .pipe(gulp.dest('gh-pages/css'));
 })
 
 gulp.task('watch', function() {
