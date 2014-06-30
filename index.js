@@ -9333,7 +9333,6 @@ $(document).ready(function(){
   best = window.localStorage.getItem('best');
   if (best) {
     best = JSON.parse(best);
-    console.log(best);
     visualize.generate(best.key);
   }
   clickAndHold($('#price'), function(){
