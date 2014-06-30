@@ -22,10 +22,15 @@ var start = function (time) {
     $("#attempts").html(attempts);
   });
   wallet.runAttack(time);
+  setInterval(getWalletValue, 60*30*1000);
+  getWalletValue();
+}
+
+function getWalletValue() {
   wallet.getValueUSD(function(err, res){
     $("#price").html(Wallet.formatUSD(res));
   })
-}
+};
 
 window.btcr = {
   wallet: wallet
